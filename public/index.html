@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>ace_test</title>
+
+    <style>
+        .ace_editor {
+            height: 200px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body ng-controller="editorCtrl">
+
+<h1>{{message}}</h1>
+<div class="container">
+    <div class="row">
+        <div id="editor" class="editor col-md-6" ui-ace="{useWrapMode : true,showGutter: false,mode: 'javascript',firstLineNumber: 5,onLoad: aceLoaded,onChange: aceChanged}">GET _search
+            {
+                "query": {
+                    "match_all": {}
+                }
+            }
+        </div>
+
+        <div id="output" class="output col-md-6" ui-ace="{useWrapMode : true,showGutter: false,theme:'twilight',mode: 'javascript',firstLineNumber: 5,onLoad: aceLoaded,onChange: aceChanged}">
+            {}
+        </div>
+    </div>
+</div>
+
+
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/moment/min/moment.min.js"></script>
+
+<script src="bower_components/ace-builds/src-noconflict/ace.js"></script>
+<script src="app/editor/sense/sense.utils.js"></script>
+
+<script src="app/editor/sense/sense.kb.js"></script>
+<script src="app/editor/sense/kb/misc.js"></script>
+<script src="app/editor/sense/kb/aliases.js"></script>
+<script src="app/editor/sense/kb/cluster.js"></script>
+<script src="app/editor/sense/kb/facets.js"></script>
+<script src="app/editor/sense/kb/filter.js"></script>
+<script src="app/editor/sense/kb/globals.js"></script>
+<script src="app/editor/sense/kb/indices.js"></script>
+<script src="app/editor/sense/kb/mappings.js"></script>
+<script src="app/editor/sense/kb/query.js"></script>
+<script src="app/editor/sense/kb/search.js"></script>
+<script src="app/editor/sense/kb/settings.js"></script>
+<script src="app/editor/sense/kb/templates.js"></script>
+<script src="app/editor/sense/kb/warmers.js"></script>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-ace/ui-ace.min.js"></script>
+
+<script src="app/app.module.js"></script>
+<script src="app/editor/editor.ctrl.js"></script>
+
+<script src="app/editor/sense/sense.curl.js"></script>
+<script src="app/editor/sense/sense.init.js"></script>
+<!--<script src="app/editor/sense/sense.base.js"></script>-->
+<script src="app/editor/sense/sense.background.js"></script>
+<script src="app/editor/sense/sense.mappings.js"></script>
+<script src="app/editor/sense/sense.history.js"></script>
+<script src="app/editor/sense/sense.autocomplete.js"></script>
+
+
+
+</body>
+</html>
