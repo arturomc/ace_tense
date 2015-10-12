@@ -323,7 +323,7 @@ function moveToNextRequestEdge() {
 moveToNextRequestEdge = autoRetryIfTokenizing(moveToNextRequestEdge);
 
 function init() {
-
+    debugger;
     sense.editor = ace.edit("editor");
     ace.require("ace/mode/sense");
     sense.editor.getSession().setMode("ace/mode/sense");
